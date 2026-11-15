@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PrintEasy makes document printing simple. Upload your file, choose your print options, and place an order." />
+  <title>PrintEasy — Printing made easy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="PrintEasy home"><span class="brand-mark">P</span><span>Print<span class="brand-accent">Easy</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#order">Place an order</a>
+      <a class="nav-link" href="#how-it-works">How it works</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </nav>
+    <a class="header-cta" href="#order">Order prints <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAMPUS PRINTING PARTNER</div>
+        <h1>Print it.<br><span>We’ll bring it.</span></h1>
+        <p class="hero-description">Your notes, assignments and project reports — printed just the way you need them and delivered to your doorstep.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#order">Start printing <span>→</span></a>
+          <a class="text-link" href="#how-it-works">See how it works <span>↗</span></a>
+        </div>
+        <div class="hero-trust"><div class="trust-avatars"><span>✦</span><span>✓</span><span>✎</span></div><div><strong>Made for students</strong><small>Simple, quick and convenient</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of printed documents">
+        <div class="art-sun"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="paper paper-back"><div class="paper-lines"></div></div>
+        <div class="paper paper-front"><div class="paper-logo">P.</div><div class="paper-title">YOUR NEXT<br>BIG IDEA.</div><div class="paper-rule"></div><div class="paper-lines"></div><div class="paper-footer">PRINTED WITH CARE</div></div>
+        <div class="floating-tag tag-fast"><span>⚡</span><div><b>Easy ordering</b><small>Just a few clicks</small></div></div>
+        <div class="floating-tag tag-delivery"><span>⌂</span><div><b>At your door</b><small>Local delivery</small></div></div>
+        <div class="art-sparkle sparkle-one">✳</div><div class="art-sparkle sparkle-two">✦</div>
+      </div>
+    </section>
+
+    <section class="benefit-strip section-wrap" aria-label="Service highlights">
+      <div class="benefit"><span class="benefit-icon">↥</span><div><b>Easy file upload</b><small>Upload your PDF</small></div></div>
+      <div class="benefit"><span class="benefit-icon">₹</span><div><b>Clear pricing</b><small>Know the cost upfront</small></div></div>
+      <div class="benefit"><span class="benefit-icon">⌖</span><div><b>Doorstep delivery</b><small>Printed and delivered</small></div></div>
+      <div class="benefit"><span class="benefit-icon">♡</span><div><b>Student friendly</b><small>Made for campus life</small></div></div>
+    </section>
+
+    <section class="order-section section-wrap" id="order">
+      <div class="section-heading">
+        <div><div class="eyebrow">LET’S GET PRINTING</div><h2>Place your <span>print order.</span></h2></div>
+        <p>Share your document and choose your preferences. We’ll take care of the rest.</p>
+      </div>
+      <div class="order-layout">
+        <form class="order-card" id="orderForm">
+          <div class="form-section-title"><span class="step-number">01</span><div><h3>Upload your document</h3><p>PDF files only · Maximum 10 MB</p></div></div>
+          <label class="upload-zone" for="fileInput" id="uploadZone">
+            <span class="upload-icon">↑</span><strong id="uploadTitle">Choose a file to upload</strong><span id="uploadHint">or drag and drop your PDF here</span><span class="browse-button">Browse files</span>
+            <input id="fileInput" type="file" accept="application/pdf,.pdf" />
+          </label>
+          <div class="form-section-title options-title"><span class="step-number">02</span><div><h3>Choose your print options</h3><p>Customise your copies</p></div></div>
+          <div class="form-grid">
+            <div class="field"><label for="printType">Print type</label><select id="printType"><option value="bw">Black &amp; white — ₹2 / page</option><option value="colour">Colour — ₹10 / page</option></select></div>
+            <div class="field"><label for="paperSize">Paper size</label><select id="paperSize"><option>A4</option><option>A3</option></select></div>
+            <div class="field"><label for="sides">Print sides</label><select id="sides"><option value="single">Single-sided</option><option value="double">Double-sided</option></select></div>
+            <div class="field"><label for="copies">Number of copies</label><div class="number-control"><button type="button" id="minusCopies" aria-label="Decrease copies">−</button><input id="copies" type="number" min="1" max="50" value="1" /><button type="button" id="plusCopies" aria-label="Increase copies">+</button></div></div>
+          </div>
+          <div class="field address-field"><label for="customerName">Your name</label><input id="customerName" type="text" placeholder="Enter your name" required maxlength="60" /></div>
+          <div class="field address-field"><label for="address">Delivery address</label><textarea id="address" rows="3" placeholder="Hostel name, room number or delivery address" required maxlength="250"></textarea></div>
+          <button class="button button-primary place-order-button" type="submit">Place my order <span>→</span></button>
+          <p class="form-note">Demo project · No real payment or delivery is processed.</p>
+        </form>
+
+        <aside class="summary-column">
+          <div class="summary-card">
+            <div class="summary-top"><span class="summary-icon">▤</span><span class="summary-label">ORDER SUMMARY</span></div>
+            <h3>Your print total</h3>
+            <p class="summary-subtitle">A quick estimate before you order.</p>
+            <div class="summary-line"><span>Pages in document</span><strong id="pageCount">—</strong></div>
+            <div class="summary-line"><span>Print type</span><strong id="summaryType">Black &amp; white</strong></div>
+            <div class="summary-line"><span>Copies</span><strong id="summaryCopies">1</strong></div>
+            <div class="summary-line"><span>Printing cost</span><strong id="printingCost">₹0.00</strong></div>
+            <div class="summary-line"><span>Delivery</span><strong>₹20.00</strong></div>
+            <div class="summary-total"><span>Estimated total</span><strong id="totalCost">₹20.00</strong></div>
+            <div class="summary-footnote">Final page count is estimated from your PDF.</div>
+          </div>
+          <div class="help-card"><span class="help-icon">?</span><div><b>Need a hand?</b><p>Make sure your PDF is clear and ready to print before uploading.</p></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works"><div class="section-wrap"><div class="center-heading"><div class="eyebrow">THREE SIMPLE STEPS</div><h2>Printing made <span>easy.</span></h2><p>From your device to your doorstep, without the hassle.</p></div><div class="steps-grid"><article class="step-card"><div class="step-illustration upload-illustration"><span class="illus-file">PDF</span><span class="illus-arrow">↑</span></div><span class="step-caption">STEP 01</span><h3>Upload your file</h3><p>Select your PDF document from your phone or computer.</p></article><article class="step-card"><div class="step-illustration customise-illustration"><span class="illus-sheet"><i></i><i></i><i></i></span><span class="illus-check">✓</span></div><span class="step-caption">STEP 02</span><h3>Choose your options</h3><p>Select colour, paper size, copies and print sides.</p></article><article class="step-card"><div class="step-illustration delivery-illustration"><span class="illus-box">▣</span><span class="illus-route">⌁</span></div><span class="step-caption">STEP 03</span><h3>Get it delivered</h3><p>Place your order and check its demo status in My Orders.</p></article></div></div></section>
+
+    <section class="pricing-section section-wrap" id="pricing"><div class="center-heading"><div class="eyebrow">SIMPLE, TRANSPARENT RATES</div><h2>Good prints. <span>Fair prices.</span></h2><p>Sample rates for this college mini project.</p></div><div class="price-cards"><article class="price-card"><span class="price-icon">B/W</span><h3>Black &amp; white</h3><p>For notes and assignments</p><div class="price"><strong>₹2</strong><span>/ page</span></div></article><article class="price-card featured-price"><span class="popular-tag">POPULAR</span><span class="price-icon colour-icon">◒</span><h3>Colour printing</h3><p>For charts and presentations</p><div class="price"><strong>₹10</strong><span>/ page</span></div></article><article class="price-card"><span class="price-icon delivery-icon">⌂</span><h3>Delivery</h3><p>Flat sample delivery charge</p><div class="price"><strong>₹20</strong><span>/ order</span></div></article></div></section>
+
+    <section class="orders-section section-wrap" id="my-orders"><div class="orders-heading"><div><div class="eyebrow">YOUR ACTIVITY</div><h2>My <span>orders.</span></h2></div><button class="clear-orders" id="clearOrders" type="button">Clear demo orders</button></div><div id="ordersList" class="orders-list"><div class="empty-orders"><span>▤</span><h3>No orders yet</h3><p>Your placed orders will show up here.</p><a href="#order" class="text-link">Place your first order →</a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">P</span><span>Print<span class="brand-accent">Easy</span></span></a><p>Making student printing a little easier. <span>© 2026 PrintEasy</span></p><a href="#home" class="back-top">Back to top ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
